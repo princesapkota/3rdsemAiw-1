@@ -1,0 +1,40 @@
+#2
+import numpy as np
+#1
+arr_range = np.arange(10,50)
+print("\n",arr_range)
+#2
+matrix_3x3 = np.arange(0,9).reshape(3,3)
+print("\n",matrix_3x3)
+#3
+identity_matrix = np.eye(3)
+print("\n",identity_matrix)
+#4
+random_array = np.random.rand(30)
+mean_value = random_array.mean()
+print("\n",random_array)
+print("\n",mean_value)
+#5
+random_matrix = np.random.random((10,10))
+min_value = random_matrix.min()
+max_value = random_matrix.max()
+print("\n",random_matrix)
+print("\n",max_value)
+print("\n",min_value)
+#6
+arr_0=np.zeros(10)
+arr_0[4]=1
+print("\n",arr_0)
+#7
+arr = np.array([1,2,0,0,4,0])
+rev_arr=arr[::-1]
+print("\n",rev_arr)
+#8
+arr_2d = np.ones((5,5))
+arr_2d[1:-1,1:-1]=0
+print("\n",arr_2d)
+#9
+checkrbd = np.zeros((8,8), dtype=int)
+checkrbd[1::2,::2]=1
+checkrbd[::2,1::2]=1
+print("\n",checkrbd)
