@@ -1,0 +1,23 @@
+#problem1
+#1
+import numpy as np
+emp_arr= np.empty((2,2))
+print(emp_arr)
+#initialize an all one array with size 4x2
+ones_arr = np.ones((4,2))
+print("\n",ones_arr)
+#3
+fill_value = 7
+shape = (3,3)
+filled_arr = np.full(shape, fill_value)
+print("\n",filled_arr)
+#4
+zeros_arr = np.zeros_like(filled_arr)
+print("\n",zeros_arr)
+#5
+ones_arr = np.ones_like(filled_arr)
+print("\n",ones_arr)
+##6
+new_list = [1,2,3,4]
+numpy_arr = np.array(new_list)
+print("\n",numpy_arr)
