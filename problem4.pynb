@@ -1,0 +1,64 @@
+import numpy as np
+import time
+
+#Element-wise Addition
+list1 = [i for i in range(1000000)]
+list2 = [i for i in range(1000000)]
+arr1 = np.array(list1)
+arr2 = np.array(list2)
+
+#Python Lists
+start_time = time.time()
+list_sum = [list1[i] + list2[i] for i in range(len(list1))]
+end_time = time.time()
+print("Time taken for element-wise addition using Python Lists: ", end_time - start_time, "seconds\n")
+
+#NumPy Arrays
+start_time = time.time()
+array_sum = arr1 + arr2
+end_time = time.time()
+print("Time taken for element-wise addition using NumPy Arrays: ", end_time - start_time, "seconds\n")
+
+#Element-wise Multiplication
+#Python Lists
+start_time = time.time()
+list_prod = [list1[i] * list2[i] for i in range(len(list1))]
+end_time = time.time()
+print("Time taken for element-wise multiplication using Python Lists: ", end_time - start_time, "seconds\n")
+
+#NumPy Arrays
+start_time = time.time()
+array_prod = arr1 * arr2
+end_time = time.time()
+print("Time taken for element-wise multiplication using NumPy Arrays: ", end_time - start_time, "seconds\n")
+
+#Dot Product
+#Python Lists
+start_time = time.time()
+dot_product_list = sum(list1[i] * list2[i] for i in range(len(list1)))
+end_time = time.time()
+print("Time taken for dot product using Python Lists: ", end_time - start_time, "seconds\n")
+
+#NumPy Arrays
+start_time = time.time()
+dot_product_array = np.dot(arr1, arr2)
+end_time = time.time()
+print("Time taken for dot product using NumPy Arrays: ", end_time - start_time, "seconds\n")
+
+#Matrix Multiplication
+matrix1 = [[i for i in range(1000)] for j in range(1000)]
+matrix2 = [[i for i in range(1000)] for j in range(1000)]
+numpy_matrix1 = np.array(matrix1)
+numpy_matrix2 = np.array(matrix2)
+
+#Python Lists
+start_time = time.time()
+matrix_result = [[sum(a * b for a, b in zip(matrix1_row, matrix2_col)) for matrix2_col in zip(*matrix2)] for matrix1_row in matrix1]
+end_time = time.time()
+print("Time taken for matrix multiplication using Python Lists: ", end_time - start_time, "seconds\n")
+
+#NumPy Arrays
+start_time = time.time()
+numpy_matrix_result = np.dot(numpy_matrix1, numpy_matrix2)
+end_time = time.time()
+print("Time taken for matrix multiplication using NumPy Arrays: ", end_time - start_time, "seconds\n")
